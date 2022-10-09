@@ -14,7 +14,8 @@ export const myCopies = async (req: Request, res: Response) => {
         })
 
         return res.status(200).json(data)
-    } catch (error) {
+    } catch (error: any) {
+        console.log(error)
         return res.status(400).json(error)
     }
 }
